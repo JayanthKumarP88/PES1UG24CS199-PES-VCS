@@ -99,7 +99,7 @@ int object_write(ObjectType type, const void *data, size_t len, ObjectID *id_out
     mkdir(shard_dir, 0755); 
 
     // 5. Write to a temporary file
-    char tmp_path[512];
+    char tmp_path[1024];
     snprintf(tmp_path, sizeof(tmp_path), "%s/.tmp_%d", shard_dir, getpid());
     
     int fd = open(tmp_path, O_CREAT | O_WRONLY | O_TRUNC, 0644);
