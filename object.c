@@ -121,6 +121,7 @@ int object_write(ObjectType type, const void *data, size_t len, ObjectID *id_out
     close(fd);
 
     // 7. Atomic rename
+// Uses atomic rename to prevent corrupt objects during crash
     if (rename(tmp_path, final_path) < 0) {
         unlink(tmp_path);
         free(full_data);
