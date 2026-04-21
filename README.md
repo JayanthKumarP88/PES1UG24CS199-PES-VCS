@@ -3,36 +3,28 @@
 **SRN:** PES1UG24CS199  
 **Course:** Bachelor of Technology in Computer Science, PES University (2024-2028)
 
-## Project Overview
-This project is a custom implementation of a Git-inspired Version Control System (VCS) called `pes`. It features a content-addressable object store, tree-based directory representation, and commit history traversal.
-
 ---
 
 ## Phase 1: Object Store
-*Implementation of blob storage with a sharded directory structure.*
-- **Screenshot 1A:** ![Phase 1A](./screenshots/163090df-f02a-4314-857e-2fca99ea9878.jpeg) - `./test_objects` output showing passing tests.
-- **Screenshot 1B:** ![Phase 1B](./screenshots/1c098c35-a7aa-4439-af1a-e90612cb30ce.jpeg) - `find .pes/objects -type f` showing the sharded directory structure.
+- **Screenshot 1A:** ![Phase 1A](./screenshots/163090df-f02a-4314-857e-2fca99ea9878.jpeg)
+- **Screenshot 1B:** ![Phase 1B](./screenshots/1c098c35-a7aa-4439-af1a-e90612cb30ce.jpeg)
 
 ## Phase 2: Tree Objects
-*Implementation of directory serialization and recursive tree construction.*
-- **Screenshot 2A:** ![Phase 2A](./screenshots/2741ccdd-e938-43bf-97de-9de0cc2f0269.jpeg) - `./test_tree` output showing successful serialization.
-- **Screenshot 2B:** ![Phase 2B](./screenshots/8ab175ac-6fe3-435e-a775-5a831bfe3201.jpeg) - `xxd` hex dump of a raw object showing binary formatting.
+- **Screenshot 2A:** ![Phase 2A](./screenshots/2741ccdd-e938-43bf-97de-9de0cc2f0269.jpeg)
+- **Screenshot 2B:** ![Phase 2B](./screenshots/8ab175ac-6fe3-435e-a775-5a831bfe3201.jpeg)
 
 ## Phase 3: The Index (Staging Area)
-*Implementation of the staging area with atomic writes and change detection.*
-- **Screenshot 3A:** ![Phase 3A](./screenshots/8cbb7f41-9d30-47a3-90cd-8b8be9739556.jpeg) - Output of `pes status` showing staged test files.
-- **Screenshot 3B:** ![Phase 3B](./screenshots/b52f1c5c-81ca-4823-3000-89ec623528f4.jpeg) - `cat .pes/index` showing the text-format index metadata.
+- **Screenshot 3A:** ![Phase 3A](./screenshots/8cbb7f41-9d30-47a3-90cd-8b8be9739556.jpeg)
+- **Screenshot 3B:** ![Phase 3B](./screenshots/b52f1c5c-81ca-4823-3000-89ec623528f4.jpeg)
 
 ## Phase 4: Commits and History
-*Implementation of commit creation, author metadata, and history traversal.*
-- **Screenshot 4A:** ![Phase 4A](./screenshots/c8728a0b-4c28-4e7e-8991-9059f7dfc026.jpeg) - `./pes log` output showing the commit chain.
-- **Screenshot 4B:** ![Phase 4B](./screenshots/d17e19d4-0050-447b-883e-51bde8d122b0.jpeg) - `find .pes -type f` showing object store growth.
-- **Screenshot 4C:** ![Phase 4C](./screenshots/d83a7346-c6f3-4421-80e4-847700ba8407.jpeg) - Verification of the symbolic reference chain.
+- **Screenshot 4A:** ![Phase 4A](./screenshots/c8728a0b-4c28-4e7e-8991-9059f7dfc026.jpeg)
+- **Screenshot 4B:** ![Phase 4B](./screenshots/d17e19d4-0050-447b-883e-51bde8d122b0.jpeg)
+- **Screenshot 4C:** ![Phase 4C](./screenshots/d83a7346-c6f3-4421-80e4-847700ba8407.jpeg)
 
 ## Final Integration Test
-*Comprehensive system test proving end-to-end functionality.*
-- **Part 1:** ![Final Part 1](./screenshots/e0a6b240-ca18-46f2-8015-a41f7c87c06c.jpeg) - Initial repo setup, staging, and early commits.
-- **Part 2:** ![Final Part 2](./screenshots/f7567e99-5565-4b63-9b6b-e395aca41f23.jpeg) - Full history log, reference chain, and object store verification.
+- **Part 1:** ![Final 1](./screenshots/e0a6b240-ca18-46f2-8015-a41f7c87c06c.jpeg)
+- **Part 2:** ![Final 2](./screenshots/f7567e99-5565-4b63-9b6b-e395aca41f23.jpeg)
 
 ---
 
