@@ -172,8 +172,10 @@ int object_read(const ObjectID *id, ObjectType *type_out, void **data_out, size_
     fclose(f);
 
     // 3. Verify integrity
+
     ObjectID computed_id;
     compute_hash(full_data, file_size, &computed_id);
+// Verify file hasn't been tampered with since creation
     if (memcmp(id->hash, computed_id.hash, HASH_SIZE) != 0) {
         free(full_data);
         return -1; 
